@@ -1,49 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-*{
+/* *{
     padding: 0;
     margin: 0;
+} */
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 body {
-    padding: 1rem;
-    background-color: #dfe6e9;
-    font-family: 'Poppins', sans-serif;
+    background-color: #f3f3f3;
+    overflow: hidden;
 }
 
-.readmore-container {
-    display: flex;
-    flex-direction: column;
-    color: #111;
-    gap: 1em;
+.card-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5rem;
+    align-items: flex-start;
 }
 
-.container {
-    padding: 1.5rem;
-    background-color: #fff;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    line-height: 1.4rem;
-    transition: box-shadow .3s;
-    transition: border-radius .3s;
+.post {
+    background: white;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
 }
 
-.container:hover {
-    border: 1px solid #aaa;
-    border-radius: 40px 10px 10px 10px;
-    box-shadow: 0 0 12px rgba(33, 33, 33, .2);   
-    /* box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,.5); */
+h2, p {
+    margin: 0;
 }
 
-.readmore-button {
-    color: #0984e3;
-    cursor: pointer;
+h2 {
+    margin-bottom: 1rem;
 }
 
 .readmore-text {
-    display: none;
+    --max-lines: 3;
+    --line-height: 1.4;
+    max-height: calc(var(--max-lines) * 1em * var(--line-height));
+    line-height: var(--line-height);
+    overflow: hidden;
+    position: relative;
 }
 
-.readmore-text--show {
-    display: inline;
+.readmore-text::before {
+    content: "";
+    position: absolute;
+    height: calc(1em * var(--line-height));
+    width: 100%;
+    bottom: 0;
+    pointer-events: none;
+    /* background: linear-gradient(to bottom, transparent, white); */
 }
+
+.readmore-button {
+    appearance: none;
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px; 
+}
+
+.readmore-button:hover {
+    background-color: #9f9fff;
+}
+
+.readmore-button::before {
+    content: "Read more";
+}
+
+.readmore-button:checked:before {
+    content: "Read less";
+}
+
+.readmore-text:has(+ .readmore-button:checked) {
+    max-height: none;
+}
+
