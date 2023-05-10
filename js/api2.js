@@ -8,6 +8,8 @@ const post = "";
 
 const fullPostURL = apiBase + blogBase + postBase + '?_embed';
 
+
+
 async function getPosts() {
     // fetch data from API URL
     const response = await fetch(fullPostURL);
@@ -20,11 +22,15 @@ async function getPosts() {
 }
 
 function createPostHTML(post) {
-    const container = document.querySelector(".post");
+    const container = document.querySelector(".card-group");
 
     const postContainer = document.createElement("div");
-    postContainer.classList.add("post");
-    container.innerHTML += `<h2>Article 1</h2><p class="readmore-text">` + post.content.rendered + `</p><input class="readmore-button" type="checkbox">`;
+    postContainer.classList.add("card-group");
+
+    const strippedString = post.content.rendered.replace(/(<([^>]+)>)/gi, '').trim();
+
+    // container.innerHTML += `<h2>Article 1</h2><p class="readmore-text">` + post.content.rendered + `</p><input class="readmore-button" type="checkbox">`;
+    container.innerHTML += `<article class="post"><h2>Article 1</h2><p class="readmore-text">` + strippedString + `</p><input class="readmore-button" type="checkbox"></article>`;
 }
 
 function createPostsHTML(posts) {
