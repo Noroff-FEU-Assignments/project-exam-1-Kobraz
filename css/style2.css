@@ -80,3 +80,8 @@ h2 {
     max-height: none;
 }
 
+.photo {
+    height: 150px;
+    align-self: center;
+}
+

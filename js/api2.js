@@ -7,7 +7,7 @@ const posts = "";
 const post = "";
 
 const fullPostURL = apiBase + blogBase + postBase + '?_embed';
-
+const fullMediaURL = apiBase + blogBase + mediaBase;
 
 
 async function getPosts() {
@@ -21,7 +21,20 @@ async function getPosts() {
     return posts;
 }
 
-function createPostHTML(post) {
+
+async function getMedia() {
+    // fetch data from API URL
+    const response = await fetch(fullMediaURL);
+
+    // access the body data in the array
+    const media = await response.json();
+
+    //return the body data
+    return media;
+}
+
+
+function createPostHTML(post, media1) {
     const container = document.querySelector(".card-group");
 
     const postContainer = document.createElement("div");
@@ -29,22 +42,23 @@ function createPostHTML(post) {
 
     const strippedString = post.content.rendered.replace(/(<([^>]+)>)/gi, '').trim();
 
-    // container.innerHTML += `<h2>Article 1</h2><p class="readmore-text">` + post.content.rendered + `</p><input class="readmore-button" type="checkbox">`;
-    container.innerHTML += `<article class="post"><h2>Article 1</h2><p class="readmore-text">` + strippedString + `</p><input class="readmore-button" type="checkbox"></article>`;
+    container.innerHTML += `<article class="post"><h2>` + media1.title.rendered + `</h2><img class="photo" src="` + media1.guid.rendered + `" alt="` + media1.alt_text + `"><p class="readmore-text">` + strippedString + `</p><input class="readmore-button" type="checkbox"></article>`;
 }
 
-function createPostsHTML(posts) {
+function createPostsHTML(posts, media) {
     for (let i = 0; i < posts.length; i++) {
         const post = posts[i];
+        const media1 = media[i];
         
-        createPostHTML(post);
+        createPostHTML(post, media1);
     }
 }
 
 async function main() {
     const posts = await getPosts();
+    const media = await getMedia();
 
-    createPostsHTML(posts);
+    createPostsHTML(posts, media);
 }
 
 main();
