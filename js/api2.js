@@ -18,6 +18,7 @@ async function getPosts() {
     const posts = await response.json();
 
     console.log(posts);
+    console.log(posts.id);
 
     //return the body data
     return posts;
