@@ -17,6 +17,8 @@ async function getPosts() {
     // access the body data in the array
     const posts = await response.json();
 
+    console.log(posts);
+
     //return the body data
     return posts;
 }
@@ -28,6 +30,8 @@ async function getMedia() {
 
     // access the body data in the array
     const media = await response.json();
+
+    console.log(media);
 
     //return the body data
     return media;
