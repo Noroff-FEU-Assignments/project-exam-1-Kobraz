@@ -54,7 +54,10 @@ function createPostHTML(post, media1) {
 function createPostsHTML(posts, media) {
     for (let i = 0; i < posts.length; i++) {
         const post = posts[i];
-        const media1 = media[i];
+        for(let j = posts.length; j > 0; j--) {
+            const media1 = media[i];
+        }
+        
         
         createPostHTML(post, media1);
     }
