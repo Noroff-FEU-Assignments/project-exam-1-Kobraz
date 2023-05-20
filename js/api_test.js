@@ -45,7 +45,7 @@ function createPostHTML(post, media1) {
     const postContainer = document.createElement("div");
     postContainer.classList.add("card-group");
 
-    const strippedString = post.content.rendered.replace(/(<figure*</figure>)/gi, '').trim();
+    const strippedString = post.content.rendered.replace(/<figure.*>.*?<\/figure>/ig, '').trim();
 
     container.innerHTML += `<article class="post"><h2>` + media1.title.rendered + `</h2><img class="photo" src="` + media1.guid.rendered + `" alt="` + media1.alt_text + `"><p class="readmore-text">` + strippedString + `</p><input class="readmore-button" type="checkbox"></article>`;
     // container.innerHTML += `<article class="post"><h2>` + media1.title.rendered + `</h2><img class="photo" src="` + media1.guid.rendered + `" alt="` + media1.alt_text + `"><p class="readmore-text">` + post.content.rendered + `</p><input class="readmore-button" type="checkbox"></article>`;
