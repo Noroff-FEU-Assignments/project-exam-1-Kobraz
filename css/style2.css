@@ -119,6 +119,8 @@ body {
         grid-template-columns: repeat(1, 1fr);
         gap: .5rem;
         align-items: flex-start;
+        max-width: 100%;
+        overflow: hidden;
     }
 
 }

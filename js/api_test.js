@@ -39,38 +39,55 @@ async function getMedia() {
 }
 
 
+//----test
+
+function stripString(htmlString) {
+    var temporaryElement = document.createElement('div');
+    temporaryElement.innerHTML = htmlString;
+
+    var tags = temporaryElement.getElementsByTagName('*');
+    for (var i = tags.length - 1; i >= 0; i--) {
+        var tag = tags[i];
+        if (tag.tagName.toLowerCase() !== 'p') {
+            tag.parentNode.removeChild(tag);
+        }
+    }
+
+    var emptyPTags = temporaryElement.querySelectorAll('p:empty');
+    for (var j = 0; j < emptyPTags.length; j++) {
+        var emptyPTag = emptyPTags[j];
+        emptyPTag.parentNode.removeChild(emptyPTag);
+    }
+
+    var strippedString = temporaryElement.textContent.trim();
+    return strippedString;
+}
+
+
+
+//-----------
+
+
+
 function createPostHTML(post, media1) {
     const container = document.querySelector(".card-group");
 
     const postContainer = document.createElement("div");
     postContainer.classList.add("card-group");
 
-    const strippedString = post.content.rendered.replace(/<figure.*>.*?<\/figure>/ig, '').trim();
+    const strippedString = stripString(post);
 
     container.innerHTML += `<article class="post"><h2>` + media1.title.rendered + `</h2><img class="photo" src="` + media1.guid.rendered + `" alt="` + media1.alt_text + `"><p class="readmore-text">` + strippedString + `</p><input class="readmore-button" type="checkbox"></article>`;
-    // container.innerHTML += `<article class="post"><h2>` + media1.title.rendered + `</h2><img class="photo" src="` + media1.guid.rendered + `" alt="` + media1.alt_text + `"><p class="readmore-text">` + post.content.rendered + `</p><input class="readmore-button" type="checkbox"></article>`;
 }
 
 function createPostsHTML(posts, media) {
     for (let i = 0; i < posts.length; i++) {
         const post = posts[i];
         const media1 = media[i];
-
+        
         createPostHTML(post, media1);
     }
 }
-
-// function createPostsHTML(posts, media) {
-//     for (let i = 0; i < posts.length; i++) {
-//         const post = posts[i];
-//         for(let j = posts.length; j >= 0; j--) {
-//             const media1 = media[i];
-        
-//         createPostHTML(post, media1);
-        
-//         }
-//     }
-// }
 
 async function main() {
     const posts = await getPosts();
