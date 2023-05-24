@@ -49,7 +49,10 @@ function createPostHTML(post, media1) {
 
     const strippedString = post.content.rendered.replace(/(<([^>]+)>)/gi, '').trim();
 
-    carousel.innerHTML += `<img class="carouselImage" src="` + media1.guid.rendered + `" alt="image of ` + media1.title.rendered + `" data-title="` + media1.title.rendered + `" draggable="false">`;
+    console.log('post-id: ', post.id);
+    console.log('media-post: ', media1.post);
+
+    carousel.innerHTML += `<a href="details.html?id=` + media1.post + `"><img class="carouselImage" src="` + media1.guid.rendered + `" alt="image of ` + media1.title.rendered + `" data-title="` + media1.title.rendered + `" draggable="false"></a>`;
 }
 
 function createPostsHTML(posts, media) {
