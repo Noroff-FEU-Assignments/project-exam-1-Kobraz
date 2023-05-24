@@ -1,3 +1,5 @@
+import testFunction from './carousel2.js';
+
 const apiBase = "https://falchhanssen.net";
 const blogBase = "/student/ProjectExam1/blog";
 const postBase = "/wp-json/wp/v2/posts";
@@ -47,7 +49,7 @@ function createPostHTML(post, media1) {
 
     const strippedString = post.content.rendered.replace(/(<([^>]+)>)/gi, '').trim();
 
-    carousel.innerHTML += `<img class="carouselImage" src="` + media1.guid.rendered + `" alt="img" draggable="false">`;
+    carousel.innerHTML += `<img class="carouselImage" src="` + media1.guid.rendered + `" alt="image of ` + media1.title.rendered + `" data-title="` + media1.title.rendered + `" draggable="false">`;
 }
 
 function createPostsHTML(posts, media) {
@@ -64,6 +66,7 @@ async function main() {
     const media = await getMedia();
 
     createPostsHTML(posts, media);
+    testFunction();
 }
 
 main();
