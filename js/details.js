@@ -43,6 +43,24 @@ async function getDetail() {
   } catch (err) {
     alert(err);
   }
+
+  addModalFunc();
 }
+
+
+function addModalFunc() {
+  const imgs = document.querySelectorAll('img');
+
+  console.log({imgs});
+  imgs.forEach(element => {
+      element.addEventListener('click', function() {
+          element.classList.add('modal-animation');
+      })
+      element.addEventListener('mouseleave', () => {
+          element.classList.remove('modal-animation');
+      })
+  })
+}
+
 
 getDetail();
