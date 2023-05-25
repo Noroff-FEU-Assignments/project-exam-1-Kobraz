@@ -11,8 +11,11 @@ const mediaBase = "/wp-json/wp/v2/media";
 // const fullPostURL = apiBase + blogBase + postBase + id;
 // const fullMediaURL = apiBase + blogBase + mediaBase + post;
 
+console.log('Params: ',params)
+console.log('Query: ',query)
+
 const fullPostURL = 'https://falchhanssen.net/student/ProjectExam1/blog/wp-json/wp/v2/posts/' + id;
-const fullMediaURL = 'https://falchhanssen.net/student/ProjectExam1/blog/wp-json/wp/v2/media/' + id;
+const fullMediaURL = 'https://falchhanssen.net/student/ProjectExam1/blog/wp-json/wp/v2/media/' + post.post;
 
 async function getDetail() {
   const responsePost = await fetch(fullPostURL);
@@ -28,10 +31,10 @@ async function getDetail() {
   const imageContainer = document.getElementById("imageContainer");
   const textContainer = document.getElementById("textContainer");
 
-  titleContainer.innerHTML += `<div>${dataMedia.title}</div>`;
-  dateContainer.innerHTML += `<div>${dataMedia.date}</div>`;
-  imageContainer.innerHTML += `<div>${dataMedia.medium}</div>`;
-  textContainer.innerHTML += `<div>${dataPost.description}</div>`;
+  titleContainer.innerHTML += `<div>${dataPost.title.rendered}</div>`;
+  dateContainer.innerHTML += `<div>${dataPost.date}</div>`;
+  imageContainer.innerHTML += `<div>${dataMedia}</div>`;
+  textContainer.innerHTML += `<div>${dataPost.content.rendered}</div>`;
 
   console.log('title: ', dataMedia.title);
 
