@@ -26,10 +26,9 @@
 img {
     border: 2px solid black;
     border-radius: 15px;
-    /* width: 60%; */
     max-width: 100%;
     height: auto;
-    filter: drop-shadow(20px 10px 4px rgb(58, 58, 58))
+    filter: drop-shadow(10px 5px 2px rgb(58, 58, 58))
 }
 
 .container {
