@@ -14,50 +14,65 @@
 </head>
 <body>
 
-    <head>
-        <div id="topcontainer">
-              
-           <nav>
-            <div class="nav">
-                <h1>Hei</h1>
+    <header>
+        <nav class="containerTop">
+            <div class="divLogo">
+                <a href="/"><img src="img/LogoTrollfjell2.png" alt="Logo"></a>
             </div>
-           </nav>
-  
-        </div>
-     </head>
+            <ul class="nav-links">
+                <li><a href="index.html" class="menu">Home</a></li>
+                <li><a href="info.html" class="menu">About</a></li>
+                <li><a href="contact.html" class="menu">Contact</a></li>
+                <li><a href="cart.html" class="menu">Cart</a></li>
+                <li><a href="account.html" class="menu">Account</a> </li>
+            </ul>
+            
+        </nav>
+    </header>
 
     <main>
-                <div class="card">
+        <div class="mainContainer">
+            <div class="card">
 
-                    <h1 id="contact">Contact form</h1><i class="fa-solid fa-check"></i>
+                <h1 id="contact">Contact form</h1><i class="fa-solid fa-check"></i>
 
-                    <form id="form">
-                        <div class="inputBox">
-                            <p><label for="Name" id="label">Name:</label></p>
-                            <input type="text" id="name" name="name" placeholder="Enter name" maxlength="40" size="10" onkeydown="nameValidation()"><span id="nametextok"></span>
-                            <p><span id="nametext"></span></p>
-                        </div>
-                        <div class="inputBox">
-                            <p><label for="Subject" id="label">Subject:</label></p>
-                            <input type="text" id="subj" name="subj" placeholder="Enter subject" maxlength="40" size="10" onkeydown="subjValidation()"><span id="subjtextok"></span>
-                            <p><span id="subjtext"></span></p>
-                        </div>
-                        <div class="inputBox">
-                            <p><label for="Email" id="label">E-mail:</label></p>
-                            <input type="text" id="email" name="email" placeholder="Enter e-mail address" onkeydown="mailValidation()"><span id="emailtextok"></span>
-                            <p><span id="emailtext"></span></p>
-                        </div>
-                        <div class="inputBox">
-                            <p><label for="Address" id="label">Address:</label></p>
-                            <input type="text" id="addr" name="addr" placeholder="Enter address" maxlength="40" size="10" onkeydown="addrValidation()"><span id="addrtextok"></span>
-                            <p><span id="addrtext"></span></p>
-                        </div>
-                        <div>
-                            <input type="submit" value="Submit">
-                        </div>
-                    </form>
-                </div>
+                <form id="form">
+                    <div class="inputBox">
+                        <p><label for="Name" id="label">Name:</label></p>
+                        <input type="text" id="name" name="name" placeholder="Enter name" maxlength="40" size="10" onkeydown="nameValidation()"><span id="nametextok"></span>
+                        <p><span id="nametext"></span></p>
+                    </div>
+                    <div class="inputBox">
+                        <p><label for="Subject" id="label">Subject:</label></p>
+                        <input type="text" id="subj" name="subj" placeholder="Enter subject" maxlength="40" size="10" onkeydown="subjValidation()"><span id="subjtextok"></span>
+                        <p><span id="subjtext"></span></p>
+                    </div>
+                    <div class="inputBox">
+                        <p><label for="Email" id="label">E-mail:</label></p>
+                        <input type="text" id="email" name="email" placeholder="Enter e-mail address" onkeydown="mailValidation()"><span id="emailtextok"></span>
+                        <p><span id="emailtext"></span></p>
+                    </div>
+                    <div class="inputBox">
+                        <p><label for="Address" id="label">Address:</label></p>
+                        <input type="text" id="addr" name="addr" placeholder="Enter address" maxlength="40" size="10" onkeydown="addrValidation()"><span id="addrtextok"></span>
+                        <p><span id="addrtext"></span></p>
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
     </main>
+
+    
+    <footer>
+        <div class="containerBottomIndex">
+            <div class="divBottom">
+                <b>Troll Mountains</b>  •  2023 @ Roar Falch Hanssen
+            </div>
+        </div>
+    </footer>
 
     <script src="js/validation.js"></script>
 </body>

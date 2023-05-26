@@ -32,8 +32,8 @@ async function getDetail() {
   const textContainer = document.getElementById("textContainer");
 
   titleContainer.innerHTML += `<h1 class="title">${dataPost.title.rendered}</h1>`;
-  dateContainer.innerHTML += `<div class="date">${dataPost.date}</div>`;
-  imageContainer.innerHTML += `<div class="media">${dataMedia}</div>`;
+  dateContainer.innerHTML += `<div class="date">${dataPost.date.replace('T', ' • ')}</div>`;
+  // imageContainer.innerHTML += `<div class="media">${dataMedia}</div>`;
   textContainer.innerHTML += `<div class="content">${dataPost.content.rendered}</div>`;
 
   console.log('title: ', dataMedia.title);

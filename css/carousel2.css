@@ -72,6 +72,24 @@ body {
     margin-left: 0px;
 }
 
+.introHeading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    color: #fff;
+    justify-content: center;
+    display: flex;
+}
+
+.intro {
+    padding: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    justify-content: center;
+    display: flex;
+    max-width: 1200px;
+}
+
  
 /* [data-title]:hover:after {
     opacity: 1;
@@ -95,7 +113,9 @@ body {
     visibility: hidden;
 } */
 
-
+.loading {
+    top: 50%;
+}
 
 
 /* Start sideoppsett */
@@ -124,7 +144,7 @@ body {
 
 
 ul a {
-	color: #ed7d31;
+	color: #45adf0 ;
 	text-decoration: none;
 }
 
@@ -195,7 +215,7 @@ nav ul li {
 	vertical-align: middle;
 	font-family: 'Poppins', sans-serif;
     font-size: small;
-    color: #ed7d31;
+    color: #45adf0 ;
 	padding: 20px;
     
 }
@@ -210,6 +230,11 @@ nav ul li {
         width: calc(100% / 2);
     }
 
+    .divLogo {
+        width: 100px;
+        height: auto;
+        visibility: none;
+    }
 }
 
 @media screen and (max-width: 550px) {
