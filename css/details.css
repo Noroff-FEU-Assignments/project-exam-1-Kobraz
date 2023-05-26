@@ -31,9 +31,7 @@ img {
     filter: drop-shadow(10px 5px 2px rgb(58, 58, 58))
 }
 
-.wp-block-image {
-    width: 60vw;
-}
+
 
 .container {
     width: 95%;
