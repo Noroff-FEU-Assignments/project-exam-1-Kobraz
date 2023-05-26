@@ -31,10 +31,10 @@ async function getDetail() {
   const imageContainer = document.getElementById("imageContainer");
   const textContainer = document.getElementById("textContainer");
 
-  titleContainer.innerHTML += `<div>${dataPost.title.rendered}</div>`;
-  dateContainer.innerHTML += `<div>${dataPost.date}</div>`;
-  imageContainer.innerHTML += `<div>${dataMedia}</div>`;
-  textContainer.innerHTML += `<div>${dataPost.content.rendered}</div>`;
+  titleContainer.innerHTML += `<h1 class="title">${dataPost.title.rendered}</h1>`;
+  dateContainer.innerHTML += `<div class="date">${dataPost.date}</div>`;
+  imageContainer.innerHTML += `<div class="media">${dataMedia}</div>`;
+  textContainer.innerHTML += `<div class="content">${dataPost.content.rendered}</div>`;
 
   console.log('title: ', dataMedia.title);
 
