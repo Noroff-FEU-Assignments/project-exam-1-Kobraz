@@ -26,7 +26,7 @@
 img {
     border: 2px solid black;
     border-radius: 15px;
-    width: 60%
+    width: 60%;
     max-width: 90%;
     height: auto;
     filter: drop-shadow(20px 10px 4px rgb(58, 58, 58))
