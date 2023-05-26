@@ -4,22 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/carousel2.css">
+    
     <script src="https://kit.fontawesome.com/3834125a3f.js" crossorigin="anonymous"></script>
     <title>Carousel</title>
     <script src="js/apiCarousel.js" type="module"></script>
     <script src="js/carousel2.js" type="module"></script>
     <script src="js/loading.js"></script>
+    <link rel="stylesheet" href="css/carousel2.css">
     <link rel="stylesheet" href="css/loading.css">
 </head>
 <body>
-    <div class="loading"></div>
-    <div class="wrapper">
-        <i id="left" class="fa-solid fa-angle-left"></i>
-        <div class="carousel">
+
+    <header>
+        <nav class="containerTop">
+            <div class="divLogo">
+                <a href="/"><img src="img/LogoTrollfjell.png" alt="Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="menu">Home</a></li>
+                <li><a href="info.html" class="menu">About</a></li>
+                <li><a href="contact.html" class="menu">Contact</a></li>
+                <li><a href="cart.html" class="menu">Cart</a></li>
+                <li><a href="account.html" class="menu">Account</a> </li>
+            </ul>
             
+        </nav>
+    </header>
+
+    <main>
+        <div class="loading"></div>
+        <div class="wrapper">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <div class="carousel">
+                
+            </div>
+            <i id="right" class="fa-solid fa-angle-right"></i>
         </div>
-        <i id="right" class="fa-solid fa-angle-right"></i>
-    </div>
+    </main>
+
+    <footer>
+        <div class="containerBottomIndex">
+            <div class="divBottom">
+                <b>Troll Mountains</b>  •  2023 @ Roar Falch Hanssen
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
