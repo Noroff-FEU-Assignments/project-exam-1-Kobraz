@@ -137,9 +137,9 @@ html {
     overflow-x: hidden; 
 }
 
-body {
+/* body {
     position: absolute; 
-}
+} */
 
 .loading {
     top: 50%;
