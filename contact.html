@@ -22,7 +22,7 @@
             <ul class="nav-links">
                 <li><a href="index.html" class="menu">Home</a></li>
                 <li><a href="blogposts.html" class="menu">Posts</a></li>
-                <li><a href="info.html" class="menu">About</a></li>
+                <li><a href="about.html" class="menu">About</a></li>
                 <li><a href="contact.html" class="menu">Contact</a></li>
                 
             </ul>
@@ -53,8 +53,8 @@
                         <p><span id="emailtext"></span></p>
                     </div>
                     <div class="inputBox">
-                        <p><label for="Address" id="label">Address:</label></p>
-                        <input type="text" id="addr" name="addr" placeholder="Enter address" maxlength="40" size="10" onkeydown="addrValidation()"><span id="addrtextok"></span>
+                        <p><label for="Address" id="label">Message:</label></p>
+                        <textarea id="addr" name="addr" placeholder="Enter your message" maxlength="150" size="10" onkeydown="addrValidation()" onkeyup="autoGrow(this)"></textarea><span id="addrtextok"></span>
                         <p><span id="addrtext"></span></p>
                     </div>
                     <div>

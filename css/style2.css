@@ -10,10 +10,25 @@
 }
 
 body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
     background: #343F4F;
     overflow: hidden;
 }
 
+main {
+    margin-top: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    display: flex;
+    gap: 4em;
+    background: none;
+}
+
+.mainContainer {
+    margin: auto:
+}
 
 .card-group {
     margin-top: 220px;
@@ -22,6 +37,20 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: .5rem;
     align-items: flex-start;
+}
+
+.card {
+    display: flex;
+    /* margin-top: 220%; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    max-height: 500px;
+    background: #111111;
+    border: 5px solid #45adf0;
+    border-radius: 25px;
+    padding: 50px;
 }
 
 .post {
@@ -44,6 +73,14 @@ p {
     margin: 0;
 }
 
+.blogTitle {
+    text-decoration: none;
+    color: black;
+}
+
+.blogPhoto {
+    text-decoration: none;
+}
 
 .readmore-text {
     --max-lines: 3;
@@ -105,8 +142,10 @@ body {
 
 .loading {
     top: 50%;
-    z-index: 50;
+    z-index: 10000;
 }
+
+
 
 /* Start sideoppsett */
 

@@ -131,6 +131,10 @@ h1 {
     flex-direction: column;
 }
 
+#form #inputBox textarea {    
+    height: auto;
+}
+
 #text {
     font-family: 'Poppins', sans-serif;
     font-size: 12px;

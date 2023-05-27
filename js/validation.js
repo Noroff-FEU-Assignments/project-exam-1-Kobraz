@@ -63,7 +63,7 @@ function addrValidation() {
         addrtext.innerHTML = "";
     }
     else {
-        addrtext.innerHTML = "Address must be 25 chars";
+        addrtext.innerHTML = "Message must be 25 chars";
         addrtext.style.color = "#d50000";
         addrtextok.innerHTML = "";
     }
@@ -77,3 +77,10 @@ form.addEventListener('submit', (event) => {
     mailValidation();
     addrValidation();
 })
+
+function autoGrow(oField) {
+    if (oField.scrollHeight > oField.clientHeight) {
+      oField.style.height = `${oField.scrollHeight}px`;
+    }
+  }
+  

@@ -16,6 +16,11 @@ body {
     padding: 0 35px;
 }
 
+main {
+    margin-top: 220px;
+    margin-bottom: 100px;
+}
+
 .wrapper {
     max-width: 1200px;
     position: relative;
@@ -115,7 +120,7 @@ body {
 
 .loading {
     top: 50%;
-    z-index: 50;
+    z-index: 10000;
 }
 
 
