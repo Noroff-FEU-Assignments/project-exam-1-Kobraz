@@ -27,11 +27,12 @@ main {
 }
 
 .mainContainer {
-    margin: auto:
+    margin: 0 auto;
+    max-width: 500px;
 }
 
 .card-group {
-    margin-top: 220px;
+    margin-top: 10px;
     margin-bottom: 100px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
