@@ -115,6 +115,7 @@ body {
 
 .loading {
     top: 50%;
+    z-index: 50;
 }
 
 

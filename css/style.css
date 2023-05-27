@@ -7,8 +7,9 @@
 
 body {
     padding: 1rem;
-    background-color: #dfe6e9;
+    background: #343F4F;
     font-family: 'Poppins', sans-serif;
+    
 }
 
 .readmore-container {
