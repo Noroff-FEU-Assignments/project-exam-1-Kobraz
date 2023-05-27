@@ -82,13 +82,12 @@ img {
 	z-index: 200;
 	}
 
-.divLogo{
+.logoImg {
 	max-width: 180px;
 	max-height: 180px;
-    top: 10px;
-    /* background-color: #7da2ff; */
     align-self: flex-start;
     text-decoration: none;
+    filter: none;
 }
 
 
@@ -175,3 +174,112 @@ main {
 }
 
 /*  */
+
+
+/* =========================================================== */
+
+@media screen and (max-width: 900px) {
+    
+    .carousel img {
+        width: calc(100% / 2);
+    }
+
+    .logoImg {
+        width: 150px;
+        height: auto;
+        visibility: none;
+    }
+
+    nav ul li {
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        list-style: none;
+        display: inline-block;
+        margin-right: 15px;
+    }
+
+    .introHeading {
+        font-family: 'Poppins', sans-serif;
+        font-size: 22px;
+        color: #fff;
+        justify-content: center;
+        display: flex;
+    }
+    
+    .intro {
+        padding: 50px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: #fff;
+        justify-content: center;
+        display: flex;
+        max-width: 1200px;
+    }
+
+    .title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        color: black;
+    }
+        
+    .date {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: black;
+    }
+        
+    .content {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        color: black;
+        margin-bottom: 100px;
+    }
+
+}
+
+
+/* =========================================================== */
+
+@media screen and (max-width: 550px) {
+    
+    .carousel img {
+        width: 100%;
+    }
+
+    .logoImg {
+        width: 150px;
+        height: 150px;
+        display: block;
+        position: relative;
+    }
+        
+    
+
+    nav ul li {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        color: black;
+    }
+        
+    .date {
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        color: black;
+    }
+        
+    .content {
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        color: black;
+        margin-bottom: 100px;
+    }
+
+}
