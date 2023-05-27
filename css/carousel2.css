@@ -181,6 +181,15 @@ nav ul li {
 	text-decoration: none;
 }
 
+.menu-icon {
+    width: 25px;
+    margin-top: 40px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    /* margin: 0 20px; */
+}
+
 
 
 
@@ -235,6 +244,9 @@ nav ul li {
         height: auto;
         visibility: none;
     }
+
+
+
 }
 
 @media screen and (max-width: 550px) {
@@ -244,9 +256,38 @@ nav ul li {
     }
 
     .divLogo {
-        width: 100px;
-        height: auto;
-        visibility: none;
+        width: 80px;
+        height: 80px;
+        display: block;
+        position: relative;
     }
         
+    
+
+    nav ul li {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .introHeading {
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        color: #fff;
+        justify-content: center;
+        display: flex;
+    }
+    
+    .intro {
+        padding: 50px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        color: #fff;
+        justify-content: center;
+        display: flex;
+        max-width: 1200px;
+    }
+
 }
