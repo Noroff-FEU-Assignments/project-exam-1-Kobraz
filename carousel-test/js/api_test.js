@@ -1,5 +1,3 @@
-import testFunction from './carousel2.js';
-
 const apiBase = "https://falchhanssen.net";
 const blogBase = "/student/ProjectExam1/blog";
 const postBase = "/wp-json/wp/v2/posts";
@@ -16,13 +14,11 @@ async function getPosts() {
     // fetch data from API URL
     const response = await fetch(fullPostURL);
 
-    console.log('Response: ', response);
-
     // access the body data in the array
     const posts = await response.json();
 
-    console.log('posts: ', posts);
-    console.log('posts.id: ', posts.id);
+    console.log(posts);
+    console.log(posts.id);
 
     //return the body data
     return posts;
@@ -43,18 +39,45 @@ async function getMedia() {
 }
 
 
+//----test
+
+function stripString(htmlString) {
+    var temporaryElement = document.createElement('div');
+    temporaryElement.innerHTML = htmlString;
+
+    var tags = temporaryElement.getElementsByTagName('*');
+    for (var i = tags.length - 1; i >= 0; i--) {
+        var tag = tags[i];
+        if (tag.tagName.toLowerCase() !== 'p') {
+            tag.parentNode.removeChild(tag);
+        }
+    }
+
+    var emptyPTags = temporaryElement.querySelectorAll('p:empty');
+    for (var j = 0; j < emptyPTags.length; j++) {
+        var emptyPTag = emptyPTags[j];
+        emptyPTag.parentNode.removeChild(emptyPTag);
+    }
+
+    var strippedString = temporaryElement.textContent.trim();
+    return strippedString;
+}
+
+
+
+//-----------
+
+
+
 function createPostHTML(post, media1) {
-    const carousel = document.querySelector(".carousel");
+    const container = document.querySelector(".card-group");
 
     const postContainer = document.createElement("div");
     postContainer.classList.add("card-group");
 
-    const strippedString = post.content.rendered.replace(/(<([^>]+)>)/gi, '').trim();
+    const strippedString = stripString(post);
 
-    console.log('post-id: ', post.id);
-    console.log('media-post: ', media1.post);
-
-    carousel.innerHTML += `<a href="details.html?id=` + media1.post + `"><img class="carouselImage" src="` + media1.guid.rendered + `" alt="image of ` + media1.title.rendered + `" data-title="` + media1.title.rendered + `" draggable="false"></a>`;
+    container.innerHTML += `<article class="post"><h2>` + media1.title.rendered + `</h2><img class="photo" src="` + media1.guid.rendered + `" alt="` + media1.alt_text + `"><p class="readmore-text">` + strippedString + `</p><input class="readmore-button" type="checkbox"></article>`;
 }
 
 function createPostsHTML(posts, media) {
@@ -71,7 +94,6 @@ async function main() {
     const media = await getMedia();
 
     createPostsHTML(posts, media);
-    testFunction();
 }
 
 main();

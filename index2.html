@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troll Mountains | Blog Posts</title>
-    <link rel="stylesheet" href="css/style2-2.css">
-    <link rel="stylesheet" href="css/loading.css">
-    <script defer src="js/api2.js"></script>
-    <script defer src="js/readmoreless.js"></script>
+    
+    <script src="https://kit.fontawesome.com/3834125a3f.js" crossorigin="anonymous"></script>
+    <title>Carousel</title>
+    <script src="js/apiCarousel.js" type="module"></script>
+    <script src="js/carousel2-2.js" type="module"></script>
     <script src="js/loading.js"></script>
+    <link rel="stylesheet" href="css/carousel2-2.css">
+    <link rel="stylesheet" href="css/loading.css">
 </head>
 <body>
 
@@ -29,10 +31,17 @@
 
     <main>
         <div class="loading"></div>
-        <section class="card-group">
-        
-        
-        </section>
+        <h1 class="introHeading">Welcome to Troll Mountains</h1>
+        <div class="intro">
+            This blog is about the troll mountains on the coast of Helgeland in Norway. Click at the images below to read about our magical mountains. Maybe you want to visit Helgeland to see these mountains with your own eyes?
+        </div>
+        <div class="wrapper">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <div class="carousel">
+                
+            </div>
+            <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
     </main>
 
     <footer>
@@ -42,6 +51,5 @@
             </div>
         </div>
     </footer>
-
 </body>
 </html>

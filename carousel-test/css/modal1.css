@@ -1,0 +1,20 @@
+.img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.flex-wrapper {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    width: 33.33%;
+}
+
+.modal-animation {
+    zoom: 150%;
+    border-radius: 10px;
+}

@@ -1,0 +1,268 @@
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+/* .pageTitle {
+    font-family: 'Lilita One', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    color: #810000;
+    margin-left: 10px;
+	text-decoration: none;
+} */
+
+.pageTitle img {
+	border: none;
+	border-radius: 0;
+}
+
+.navbar {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    z-index: 100;
+    background: white;
+}
+
+.logo {
+    width: 100px;
+    cursor: pointer;
+    margin: 30px 0;
+    text-decoration: none;
+}
+
+.menu-icon {
+    width: 25px;
+    cursor: pointer;
+    display: none;
+    margin: 0 20px;
+}
+
+.topcontainer {
+    width: 100%;
+	top: 0px;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	background-color: #fdff6b;
+}
+
+/* nav {
+    flex: 1;
+    text-align: right;
+} */
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+	margin-left: 20px;
+}
+
+nav ul li a {
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	font-weight: 900;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	font-weight: 900;
+    color: #810000;
+
+}
+
+#vlink {
+	text-decoration: overline;
+	text-decoration: underline;
+}
+
+#index {
+	font-family: 'Poppins', sans-serif;
+	font-size: 35px;
+	text-align: center;
+	color: #810000;
+}
+
+#contact {
+	font-family: 'Poppins', sans-serif;
+	font-size: 30px;
+	text-align: center;
+	color: #fff;
+}
+
+img {
+	width: 80px;
+	border-radius: 15px;
+	border: 1px dotted black;
+}
+
+#imageContainer img {
+	width: 200px;
+	border-radius: 15px;
+	border: 1px dotted #333;
+}
+
+#imageContainer img:Hover {
+	width: 400px;
+	border-radius: 15px;
+	border: 1px dotted #fff;
+}
+
+/*In case I want to hover the images on the first page*/
+/* img:hover {
+	width: 120px;
+	border: 3px solid red;
+} */
+
+.container {
+	width: 90%;
+	justify-content: center;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.table {
+	font-size: 16px;
+	border-collapse: collapse;
+	box-shadow: 0 20px 20px #a2a7ab;
+	border-radius: 10px 10px 8px 8px;
+	overflow: hidden;
+}
+
+.table thead tr {
+	font-family: 'Poppins', sans-serif;
+	text-align: left;
+	font-size: 20px;
+	font-weight: 200;
+	color:white;
+	background-image: linear-gradient(#ef0000, #810000);
+}
+
+.table th, .table td{
+	padding: 12px 15px;
+}
+
+.table tbody tr:nth-child(even){
+	background-color: #efefef;
+}
+
+.table tbody tr:nth-child(odd){
+	background-color: #fff;
+}
+
+.table tbody tr:last-of-type {
+	border-bottom: 8px solid #810000
+}
+
+.table tbody tr:hover {
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+	border-top: 2px solid #810000;
+	border-bottom: 2px solid #810000;
+	cursor: pointer;
+	background-color: #ffe9e9;
+}
+
+tr:hover td img {
+	border: 2px solid #810000;
+}
+
+#titleContainer {
+	font-family: 'Poppins', sans-serif;
+	font-size: 28px;
+	text-align: center;
+	color: black;
+	padding: 15px;
+	margin: 20px;
+
+}
+
+#categoryContainer {
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+	width: 200px;
+	background-color: #810000;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 15px;
+	margin: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#descriptionContainer {
+	font-family: 'Poppins', sans-serif;
+	font-size: 22px;
+	color: rgb(0, 0, 0);
+	background-color: white;
+	border: 0px solid black;
+	border-radius: 10px;
+	padding: 15px;
+	margin: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	justify-self: center;
+}
+
+#imageContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 15px;
+	margin: 20px;
+}
+
+
+
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+	align-content: center;
+	background-color: #fff;
+	transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loading-hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.loading::after {
+	content: "";
+	width: 100px;
+	height: 100px;
+	border: 18px solid #ddd;
+	border-top-color: #810000;
+	border-radius: 50%;
+	animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+	from{
+		transform: rotate(0turn);
+	}
+	to{
+		transform: rotate(1turn);
+	}
+}

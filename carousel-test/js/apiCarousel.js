@@ -16,8 +16,6 @@ async function getPosts() {
     // fetch data from API URL
     const response = await fetch(fullPostURL);
 
-    console.log('Response: ', response);
-
     // access the body data in the array
     const posts = await response.json();
 

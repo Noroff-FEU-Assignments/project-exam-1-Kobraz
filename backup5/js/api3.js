@@ -1,5 +1,3 @@
-import testFunction from './carousel2.js';
-
 const apiBase = "https://falchhanssen.net";
 const blogBase = "/student/ProjectExam1/blog";
 const postBase = "/wp-json/wp/v2/posts";
@@ -16,13 +14,11 @@ async function getPosts() {
     // fetch data from API URL
     const response = await fetch(fullPostURL);
 
-    console.log('Response: ', response);
-
     // access the body data in the array
     const posts = await response.json();
 
-    console.log('posts: ', posts);
-    console.log('posts.id: ', posts.id);
+    console.log(posts);
+    console.log(posts.id);
 
     //return the body data
     return posts;
@@ -51,10 +47,7 @@ function createPostHTML(post, media1) {
 
     const strippedString = post.content.rendered.replace(/(<([^>]+)>)/gi, '').trim();
 
-    console.log('post-id: ', post.id);
-    console.log('media-post: ', media1.post);
-
-    carousel.innerHTML += `<a href="details.html?id=` + media1.post + `"><img class="carouselImage" src="` + media1.guid.rendered + `" alt="image of ` + media1.title.rendered + `" data-title="` + media1.title.rendered + `" draggable="false"></a>`;
+    carousel.innerHTML += `<img class="carouselImage" src="` + media1.guid.rendered + `" alt="img" draggable="false">`;
 }
 
 function createPostsHTML(posts, media) {
@@ -71,7 +64,6 @@ async function main() {
     const media = await getMedia();
 
     createPostsHTML(posts, media);
-    testFunction();
 }
 
 main();

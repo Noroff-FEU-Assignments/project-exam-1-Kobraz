@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <title>Contact Us</title>
+</head>
+<body>
+
+    <header>
+        <nav class="containerTop">
+            <div class="divLogo">
+                <a href="/"><img class="logoImg" src="img/LogoTrollfjell2.png" alt="Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="menu">Home</a></li>
+                <li><a href="blogposts.html" class="menu">Posts</a></li>
+                <li><a href="info.html" class="menu">About</a></li>
+                <li><a href="contact.html" class="menu">Contact</a></li>
+                
+            </ul>
+            
+        </nav>
+    </header>
+
+    <main>
+        <div class="mainContainer">
+            <div class="card">
+
+                <h1 id="contact">Contact form</h1><i class="fa-solid fa-check"></i>
+
+                <form id="form">
+                    <div class="inputBox">
+                        <p><label for="Name" id="label">Name:</label></p>
+                        <input type="text" id="name" name="name" placeholder="Enter name" maxlength="40" size="10" onkeydown="nameValidation()"><span id="nametextok"></span>
+                        <p><span id="nametext"></span></p>
+                    </div>
+                    <div class="inputBox">
+                        <p><label for="Subject" id="label">Subject:</label></p>
+                        <input type="text" id="subj" name="subj" placeholder="Enter subject" maxlength="40" size="10" onkeydown="subjValidation()"><span id="subjtextok"></span>
+                        <p><span id="subjtext"></span></p>
+                    </div>
+                    <div class="inputBox">
+                        <p><label for="Email" id="label">E-mail:</label></p>
+                        <input type="text" id="email" name="email" placeholder="Enter e-mail address" onkeydown="mailValidation()"><span id="emailtextok"></span>
+                        <p><span id="emailtext"></span></p>
+                    </div>
+                    <div class="inputBox">
+                        <p><label for="Address" id="label">Address:</label></p>
+                        <input type="text" id="addr" name="addr" placeholder="Enter address" maxlength="40" size="10" onkeydown="addrValidation()"><span id="addrtextok"></span>
+                        <p><span id="addrtext"></span></p>
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    
+    <footer>
+        <div class="containerBottomIndex">
+            <div class="divBottom">
+                <b>Troll Mountains</b>  •  2023 @ Roar Falch Hanssen
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/validation.js"></script>
+</body>
+</html>
+
