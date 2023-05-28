@@ -47,7 +47,7 @@ function createPostHTML(post, media1) {
 
     const strippedString = post.content.rendered.replace(/(<([^>]+)>)/gi, '').trim();
 
-    container.innerHTML += `<article class="post"><a class="blogTitle" href="details.html?id=` + media1.post + `"><h2>` + media1.title.rendered + `</h2></a><a class="blogPhoto" href="details.html?id=` + media1.post + `"><img class="photo" src="` + media1.guid.rendered + `" alt="` + media1.alt_text + `"></a><p class="readmore-text">` + strippedString + `</p><input class="readmore-button" type="checkbox"></article>`;
+    container.innerHTML += `<article class="post"><a class="blogTitle" href="details.html?id=` + media1.post + `"><h2>` + media1.title.rendered + `</h2></a><a class="blogPhoto" href="details.html?id=` + media1.post + `"><img class="photo" src="` + media1.guid.rendered + `" alt="image of ` + media1.title.rendered + `"></a><p class="readmore-text">` + strippedString + `</p><input class="readmore-button" type="checkbox"></article>`;
 }
 
 function createPostsHTML(posts, media) {
