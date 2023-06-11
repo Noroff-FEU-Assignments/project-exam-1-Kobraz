@@ -14,6 +14,8 @@ In JavaScript my job was now to fetch the blog post content from the API from my
 
 I run into several problems during the process.
 
+## Languages
+
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
@@ -21,25 +23,23 @@ I run into several problems during the process.
 ![]()
 ![]()
 
-## Built With
+## Tools
 
-Languages
-
-- HTML
-- CSS
-- JavaScript
+![VSCode](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
+![Wordpress](https://img.shields.io/badge/Wordpress-21759B?style=for-the-badge&logo=wordpress&logoColor=white)
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white)
+![Word](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white)
 
 ## Getting Started
 
 ### Installing
 
-1. Create and clone the repo:
-
 I got a new repo on Noroff's GitHub and cloned it to local. Then I added a new site on Netlify.com and connected to my repo.
 
 The next step was to copy my files from the first project (same site, that I should modify now). THen I had to commit and push the files in GitHub.
-
-2. Install the dependencies:
 
 Then I started creating a WordPress installation on my private server.
 
