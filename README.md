@@ -57,16 +57,6 @@ To view the page just follow the link below.
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
-
-![My Facebook page](https://www.facebook.com/roarfh/)
-
 [![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/roarfh/)
-
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/webutvikleren)
-
 [![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/roar-falch-hanssen-0781aa56?fbclid=IwAR0--0n8C0uRH3bLF11PFOg8uf1kKjJfg2w8yQbF-fLT39cJ9RdhP4UeRDo)
-
-[My Twitter page](https://twitter.com/webutvikleren)
-
-[My LinkedIn page](https://www.linkedin.com/in/roar-falch-hanssen-0781aa56?fbclid=IwAR0--0n8C0uRH3bLF11PFOg8uf1kKjJfg2w8yQbF-fLT39cJ9RdhP4UeRDo)
