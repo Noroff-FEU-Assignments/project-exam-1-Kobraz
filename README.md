@@ -59,7 +59,7 @@ To view the page just follow the link below.
 
 This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
 
-[My Facebook page](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white)(https://www.facebook.com/roarfh/)
+![My Facebook page](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white)(https://www.facebook.com/roarfh/)
 
 [My Twitter page](https://twitter.com/webutvikleren)
 
