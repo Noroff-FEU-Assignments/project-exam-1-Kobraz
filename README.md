@@ -53,7 +53,7 @@ Then I had to do some work in my HTML to remove the hardcoded images and informa
 
 To view the page just open the link below in your browser.
 
-[![Square Eyes website](https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://roarfh2.netlify.app/)
+[![Troll Mountains website](https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://roarfh2.netlify.app/)
 
 ## Contact
 
