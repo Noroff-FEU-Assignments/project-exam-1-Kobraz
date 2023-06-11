@@ -51,9 +51,9 @@ Then I had to do some work in my HTML to remove the hardcoded images and informa
 
 ### Running
 
-To view the page just follow the link below.
+To view the page just open the link below in your browser.
 
-[Square Eyes website](https://roarfh2.netlify.app/)
+[![Square Eyes website](https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://roarfh2.netlify.app/)
 
 ## Contact
 
